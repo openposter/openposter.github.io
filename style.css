@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;700&display=swap');
+
+:root {
+    --background: rgba(255, 255, 255, 0.9);
+    --surface: rgba(255, 255, 255, 0.7);
+    --surface-hover: rgba(255, 255, 255, 0.85);
+    --text: #000;
+    --text-secondary: #666;
+    --accent: #007AFF;
+    --border: rgba(0, 0, 0, 0.1);
+    --shadow: rgba(0, 0, 0, 0.1);
+    --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --layer-1: rgba(255, 255, 255, 0.7);
+    --layer-2: rgba(255, 255, 255, 0.5);
+    --layer-3: rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] {
+    --background: rgba(28, 28, 30, 0.9);
+    --surface: rgba(44, 44, 46, 0.7);
+    --surface-hover: rgba(44, 44, 46, 0.85);
+    --text: #fff;
+    --text-secondary: #999;
+    --accent: #0A84FF;
+    --border: rgba(255, 255, 255, 0.1);
+    --shadow: rgba(0, 0, 0, 0.3);
+    --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --layer-1: rgba(44, 44, 46, 0.7);
+    --layer-2: rgba(44, 44, 46, 0.5);
+    --layer-3: rgba(44, 44, 46, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    background: var(--surface);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 15px;
+    box-shadow: 0 4px 6px var(--shadow);
+    z-index: 1000;
+    border: 1px solid var(--border);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo img {
+    height: 30px;
+    width: auto;
+}
+
+.nav-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.nav-items {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-items a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-items a:hover,
+.nav-items a.active {
+    background-color: var(--border);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--text);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+main {
+    padding: 120px 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 0;
+    position: relative;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.hero-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    background: var(--surface-hover);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.button svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.about {
+    margin-top: 100px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+}
+
+.about-content, .credits-section {
+    background: var(--surface);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    box-shadow: var(--card-shadow);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.faq {
+    margin: 40px 0;
+}
+
+details {
+    background: var(--layer-1);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+details:hover {
+    background: var(--layer-2);
+}
+
+summary {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+details p {
+    margin-top: 15px;
+    color: var(--text-secondary);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.team-member {
+    text-align: center;
+    padding: 20px;
+    background: var(--layer-1);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    background: var(--layer-2);
+    box-shadow: var(--card-shadow);
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid var(--border);
+}
+
+.team-member h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.github-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.github-link:hover {
+    opacity: 0.8;
+}
+
+#themeSelect {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-title {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: stretch;
+        border: 1px solid var(--border);
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .about {
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-logo {
+        width: 80px;
+        height: 80px;
+    }
+}

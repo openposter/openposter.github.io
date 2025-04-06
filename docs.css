@@ -16,7 +16,7 @@
     height: calc(100vh - 100px);
     overflow-y: auto;
     padding-right: 20px;
-    padding-top: 20px;
+    padding-top: 22px;
 }
 
 .sidebar-content {
@@ -25,6 +25,7 @@
     padding: 20px;
     border: 1px solid var(--border);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .sidebar-section {
@@ -76,6 +77,7 @@
     margin-bottom: 40px;
     border: 1px solid var(--border);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .docs-content h1 {
@@ -126,7 +128,9 @@
         position: relative;
         top: 0;
         height: auto;
-        padding-right: 0;
+        padding-right: 20px;
+        padding-top: 120px;
+        padding-left: 20px;
     }
 
     .docs-content {

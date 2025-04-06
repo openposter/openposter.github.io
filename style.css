@@ -13,6 +13,7 @@
     --layer-1: rgba(255, 255, 255, 0.7);
     --layer-2: rgba(255, 255, 255, 0.5);
     --layer-3: rgba(255, 255, 255, 0.3);
+    --mobile-menu-bg: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -28,6 +29,7 @@
     --layer-1: rgba(44, 44, 46, 0.7);
     --layer-2: rgba(44, 44, 46, 0.5);
     --layer-3: rgba(44, 44, 46, 0.3);
+    --mobile-menu-bg: hsl(0, 0%, 25%);
 }
 
 * {
@@ -54,7 +56,8 @@ body {
     max-width: 1200px;
     background: var(--surface);
     backdrop-filter: blur(10px);
-    border-radius: 25px;
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
     padding: 15px;
     box-shadow: 0 4px 6px var(--shadow);
     z-index: 1000;
@@ -176,6 +179,7 @@ h1 {
     color: var(--text);
     border: 1px solid var(--border);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .button:hover {
@@ -203,6 +207,7 @@ h1 {
     padding: 40px;
     border-radius: 20px;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid var(--border);
     box-shadow: var(--card-shadow);
 }
@@ -290,8 +295,16 @@ details p {
     color: var(--text);
     border: 1px solid var(--border);
     padding: 8px;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
+}
+
+.hero,
+.about-content,
+.credits-section,
+.docs-content section {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 @media (max-width: 768px) {
@@ -309,8 +322,7 @@ details p {
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--surface);
-        backdrop-filter: blur(10px);
+        background: var(--mobile-menu-bg);
         padding: 20px;
         border-radius: 15px;
         margin-top: 10px;

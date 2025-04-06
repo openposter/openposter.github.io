@@ -1,0 +1,153 @@
+.docs-container {
+    display: flex;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.docs-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 100px;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.sidebar-content {
+    background: var(--surface);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
+
+.sidebar-section {
+    margin-bottom: 20px;
+}
+
+.sidebar-section h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.sidebar-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-section ul li {
+    margin-bottom: 8px;
+}
+
+.sidebar-section ul li a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.sidebar-section ul li a:hover,
+.sidebar-section ul li a.active {
+    background: var(--layer-1);
+    color: var(--text);
+}
+
+.docs-content {
+    flex: 1;
+    max-width: 800px;
+    padding-bottom: 60px;
+}
+
+.docs-content section {
+    background: var(--surface);
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 40px;
+    border: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
+
+.docs-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.docs-content h2 {
+    font-size: 1.8rem;
+    margin: 30px 0 15px;
+}
+
+.docs-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.docs-content ul,
+.docs-content ol {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.docs-content li {
+    margin-bottom: 8px;
+}
+
+.docs-content pre {
+    background: var(--layer-1);
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.docs-content code {
+    font-family: 'SF Mono', monospace;
+    font-size: 0.9em;
+}
+
+@media (max-width: 1024px) {
+    .docs-container {
+        flex-direction: column;
+    }
+
+    .docs-sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+        height: auto;
+        padding-right: 0;
+    }
+
+    .docs-content {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .docs-content section {
+        padding: 20px;
+    }
+
+    .docs-content h1 {
+        font-size: 2rem;
+    }
+
+    .docs-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.link {
+    color: rgb(105, 150, 253);
+}

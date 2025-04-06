@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="OpenPoster is a collection of scripts to edit .ca files, all connected through a GUI powered by hope, dreams, and a bit of code.">
+    <meta name="keywords" content="OpenPoster, .ca files, GUI, scripts, open-source, Nugget, Posterboard">
+    <meta name="author" content="OpenPoster Team">
+    <title>OpenPoster Documentation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="docs.css">
+    <link rel="icon" href="images/openposter.png">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <img src="images/openposter.png" alt="OpenPoster Logo">
+                <span class="nav-title">OpenPoster</span>
+            </div>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="docs.html" class="active">Docs</a></li>
+                <li><a href="https://github.com/openposter">GitHub</a></li>
+                <li><a href="https://discord.gg/keXt4ghSvn">Discord</a></li>
+                <li class="theme-switcher">
+                    <select id="themeSelect">
+                        <option value="system">System Theme</option>
+                        <option value="light">Light Theme</option>
+                        <option value="dark">Dark Theme</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="docs-container">
+        <aside class="docs-sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3>Getting Started</h3>
+                    <ul>
+                        <li><a href="#introduction" class="active">Introduction</a></li>
+                        <li><a href="#installation">Installation</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </aside>
+
+        <main class="docs-content">
+            <section id="introduction">
+                <h1>Introduction</h1>
+                <p>Welcome to the OpenPoster documentation. This guide will help you understand how to use OpenPoster effectively for managing and editing .ca files.</p>
+                <h2>What is OpenPoster?</h2>
+                <p>OpenPoster is a powerful GUI tool designed to simplify the process of editing .ca files. Whether you're a beginner or an experienced user, OpenPoster provides the tools you need to work with .ca files efficiently.</p>
+            </section>
+
+            <section id="installation">
+                <h1>Installation</h1>
+                <p>Installing OpenPoster is really simple. Clone the repository from the <a class="link" href="https://github.com/openposter/OpenPoster">OpenPoster repo</a> onto your computer.</p>
+                <h2>Setup</h2>
+                <p>For now, there isn't a proper release because OpenPoster is early in development. You can still test OpenPoster by running these:<br><br>To build the QT UI:<br><code>pyside6-uic ui/mainwindow.ui -o ui/ui_mainwindow.py</code><br><br>To build the application:<br><code>python3 compile.py</code></p>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="docs.js"></script>
+</body>
+</html>

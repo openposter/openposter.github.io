@@ -61,3 +61,28 @@ document.querySelectorAll('.scroll-link').forEach(link => {
         hamburger.classList.remove('active');
     });
 });
+
+// Copy button in docs code blocks
+document.addEventListener('DOMContentLoaded', function() {
+    const copyButtons = document.querySelectorAll('.copy-button');
+    
+    copyButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const codeBlock = this.previousElementSibling;
+            const textToCopy = codeBlock.textContent;
+            
+            navigator.clipboard.writeText(textToCopy)
+                .then(() => {
+                    const originalText = this.textContent;
+                    this.textContent = 'Copied!';
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                    }, 2000);
+                })
+                .catch(err => {
+                    console.error('Failed to copy: ', err);
+                });
+        });
+    });
+});

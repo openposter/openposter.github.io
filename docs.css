@@ -6,14 +6,15 @@
     gap: 40px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 40px;
 }
 
 .docs-sidebar {
     width: 280px;
     flex-shrink: 0;
     position: sticky;
-    top: 100px;
-    height: calc(100vh - 100px);
+    top: 120px;
+    height: calc(100vh - 120px);
     overflow-y: auto;
     padding-right: 20px;
     padding-top: 22px;
@@ -21,7 +22,7 @@
 
 .sidebar-content {
     background: var(--surface);
-    border-radius: 15px;
+    border-radius: 25px;
     padding: 20px;
     border: 1px solid var(--border);
     backdrop-filter: blur(10px);
@@ -72,7 +73,7 @@
 
 .docs-content section {
     background: var(--surface);
-    border-radius: 15px;
+    border-radius: 25px;
     padding: 40px;
     margin-bottom: 40px;
     border: 1px solid var(--border);
@@ -108,7 +109,7 @@
 .docs-content pre {
     background: var(--layer-1);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow-x: auto;
     margin: 20px 0;
 }
@@ -154,4 +155,12 @@
 
 .link {
     color: rgb(105, 150, 253);
+}
+
+.screenshot {
+    margin: 30px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
 }

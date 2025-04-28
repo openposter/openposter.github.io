@@ -26,8 +26,8 @@
             <ul class="nav-items">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="docs.html" class="active">Docs</a></li>
-                <li><a href="https://github.com/openposter">GitHub</a></li>
-                <li><a href="https://discord.gg/keXt4ghSvn">Discord</a></li>
+                <li><a href="https://github.com/openposter" target="_blank">GitHub</a></li>
+                <li><a href="https://discord.gg/keXt4ghSvn" target="_blank">Discord</a></li>
                 <li class="theme-switcher">
                     <select id="themeSelect">
                         <option value="system">System Theme</option>
@@ -49,7 +49,14 @@
                         <li><a href="#installation">Installation</a></li>
                     </ul>
                 </div>
-
+                <div class="sidebar-section">
+                    <h3>Features</h3>
+                    <ul>
+                        <li><a href="#inspector">Inspector</a></li>
+                        <li><a href="#preview">Preview</a></li>
+                        <li><a href="#screenshots">Screenshots</a></li>
+                    </ul>
+                </div>
             </div>
         </aside>
 
@@ -59,16 +66,69 @@
                 <p>Welcome to the OpenPoster documentation. This guide will help you understand how to use OpenPoster effectively for managing and editing .ca files.</p>
                 <h2>What is OpenPoster?</h2>
                 <p>OpenPoster is a powerful GUI tool designed to simplify the process of editing .ca files. Whether you're a beginner or an experienced user, OpenPoster provides the tools you need to work with .ca files efficiently.</p>
+                <p>OpenPoster is a collection of scripts to edit .ca files, all connected through a GUI powered by hope, dreams, and a bit of code.</p>
+                <p>Website: <a href="https://openposter.pages.dev/" class="link" target="_blank">https://openposter.pages.dev/</a></p>
             </section>
 
             <section id="installation">
                 <h1>Installation</h1>
-                <p>Installing OpenPoster is really simple. Clone the repository from the <a class="link" href="https://github.com/openposter/OpenPoster">OpenPoster repo</a> onto your computer.</p>
-                <h2>Setup</h2>
-                <p>For now, there isn't a proper release because OpenPoster is early in development. You can still test OpenPoster by running these:<br><br>To build the QT UI:<br><code>pyside6-uic ui/mainwindow.ui -o ui/ui_mainwindow.py</code><br><br>To build the application:<br><code>python3 compile.py</code></p>
+                <p>Installing OpenPoster is really simple. Clone the repository from the <a class="link" href="https://github.com/openposter/OpenPoster" target="_blank">OpenPoster repo</a> onto your computer.</p>
+                
+                <h2>Install Requirements</h2>
+                <p>First, install all the required dependencies by running:</p>
+                <pre><code>pip3 install -r requirements.txt</code><button class="copy-button">Copy</button></pre>
+                
+                <h2>Build the Application</h2>
+                <p>To build and run the OpenPoster app, execute:</p>
+                <pre><code>python3 app.py</code><button class="copy-button">Copy</button></pre>
             </section>
+
+            <section id="inspector">
+                <h1>Features</h1>
+                <h2>Inspector</h2>
+                <p>The Inspector tool allows you to examine various keys and their values in your .ca files. You can inspect the following keys:</p>
+                
+                <ul>
+                    <li>name</li>
+                    <li>type</li>
+                    <li>keyPath</li>
+                    <li>duration</li>
+                    <li>beginTime</li>
+                    <li>fillMode</li>
+                    <li>repeatCount</li>
+                    <li>calculationMode</li>
+                    <li>values</li>
+                    <li>keyTimes</li>
+                    <li>states</li>
+                </ul>
+
+                <h2>Preview</h2>
+                <p>The Preview feature allows you to see the Base State's objects in your .ca files, such as:</p>
+                <ul>
+                    <li>Images</li>
+                    <li>Text</li>
+                    <li>And more elements</li>
+                </ul>
+
+                <p>With OpenPoster, you can view all the layers contained within the .ca file you're working with.</p>
+                
+                <div class="screenshot">
+                    <img src="https://github.com/user-attachments/assets/b918ce53-07eb-4da7-ac1d-50adb432759c" alt="OpenPoster Interface Screenshot" width="100%">
+                </div>
         </main>
     </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://github.com/openposter/OpenPoster?tab=coc-ov-file" target="_blank">Conduct</a>
+                <a href="https://github.com/openposter/OpenPoster?tab=MIT-1-ov-file" target="_blank">License</a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 OpenPoster. All rights reserved.
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
     <script src="docs.js"></script>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download OpenPoster v0.0.3 Beta 1</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../images/openposter.png">
+    <meta content="Download OpenPoster v0.0.3 Beta 1" property="og:title">
+    <meta content="Download the beta version of OpenPoster v0.0.3." property="og:description">
+    <meta content="#f67fe9" data-react-helmet="true" name="theme-color">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            padding: 30px;
+            border-radius: 8px;
+            background-color: var(--secondary-bg-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: var(--primary-accent-color);
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: var(--text-color-secondary);
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .button-windows {
+            background-color: #0078D4;
+            color: white;
+        }
+        .button-windows:hover {
+            background-color: #005a9e;
+            transform: translateY(-2px);
+        }
+        .button-mac {
+            background-color: #333;
+            color: white;
+        }
+        .button-mac:hover {
+            background-color: #555;
+            transform: translateY(-2px);
+        }
+        .beta-notice {
+            margin-top: 25px;
+            font-size: 0.9em;
+            color: var(--text-color-secondary);
+        }
+        .home-link {
+            margin-top: 30px;
+            display: inline-block;
+            color: var(--primary-accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .home-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../images/openposter.png" alt="OpenPoster Logo" class="logo">
+        <h1>OpenPoster v0.0.3</h1>
+        <h2>Beta 1 Release</h2>
+        <p>Thank you for testing OpenPoster! Please find the download links below.</p>
+        
+        <div>
+            <a href="/beta/windows" download="OpenPoster-v0.0.3-beta1-windows.zip" class="button button-windows">Download for Windows</a>
+            <a href="/beta/mac" download="OpenPoster-v0.0.3-beta1-mac.dmg" class="button button-mac">Download for Mac</a>
+        </div>
+        
+        <p class="beta-notice">This is a beta version and may contain bugs or incomplete features. Your feedback is highly appreciated! Please report any issues on our <a href="https://github.com/openposter/OpenPoster/issues" target="_blank" class="link">GitHub Issues</a> or <a href="https://discord.gg/keXt4ghSvn" target="_blank" class="link">Discord server</a>.</p>
+        
+        <a href="/" class="home-link">Back to Home</a>
+    </div>
+    <script>
+        // Basic theme handling to respect system preference or localStorage
+        const themeSelect = { value: localStorage.getItem('theme') || 'system' }; // Mock theme select if not present
+        const applyTheme = () => {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (themeSelect.value === 'dark' || (themeSelect.value === 'system' && prefersDark)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        };
+        applyTheme();
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
+    </script>
+</body>
+</html> 

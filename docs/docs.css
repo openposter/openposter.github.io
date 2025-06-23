@@ -161,6 +161,42 @@
     margin: 30px 0;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--border);
+}
+#image-modal { /*Squair. - add stuff for image zoom*/
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+}
+
+#image-modal img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #000;
+    transition: transform 0.3s ease;
+}
+
+#image-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10000;
+    transition: 0.2s;
+}
+
+#image-modal-close:hover {
+    color: #f67fe9;
+    transform: scale(1.2);
 }

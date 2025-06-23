@@ -86,3 +86,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+//Squair was here \/
+//Zoom in on image on click
+
+document.addEventListener("DOMContentLoaded", () => {
+const images = document.querySelectorAll(".docs-content img");
+const modal = document.getElementById("image-modal");
+const modalImg = document.getElementById("image-modal-img");
+
+images.forEach(img => {
+    img.style.cursor = "zoom-in";
+    img.addEventListener("click", () => {
+    modal.style.display = "flex";
+    modalImg.src = img.src;
+    modalImg.alt = img.alt;
+    });
+});
+
+// Close modal on background click
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeImageModal();
+    });
+});
+
+function closeImageModal() {
+    const modal = document.getElementById("image-modal");
+    modal.style.display = "none";
+    document.body.style.overflow = "";
+}

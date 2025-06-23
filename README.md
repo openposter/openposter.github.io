@@ -1,2 +1,2 @@
-# OpenPoster-Website
-The official website for OpenPoster, with documentation on how to use OpenPoster.
+# OpenPoster Website
+A website on what OpenPoster is, what it's used for, and the installation process.

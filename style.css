@@ -769,3 +769,12 @@ pre code {
 .copy-button:hover {
     opacity: 1;
 }
+
+.image-rounded { /*Squair was here*/
+    border-radius: 16px;
+    box-shadow: 3px 3px 15px #a8a8a8;
+}
+
+[data-theme="dark"] .image-rounded {
+    box-shadow: none;
+}

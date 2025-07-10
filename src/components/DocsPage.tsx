@@ -163,11 +163,11 @@ function DocsPage({ onNavigate }: { onNavigate: (page: string) => void }) {
                   <h2 className="text-xl sm:text-3xl font-semibold text-black mb-3">Usage</h2>
                   <div className="space-y-3 text-gray-600">
                     <p>Now that OpenPoster is open and ready, let's make wallpapers. You'll be greeted by a welcome screen, with 2 buttons; "Create a new .ca file", and "Open .ca file".</p>
-                    
+                    <img src='/app/welcome.png' className='w-full rounded-2xl'></img>
                     <h3 className="text-base sm:text-xl font-medium text-black">Welcome Screen</h3>
                     <p>If you're a beginner, I would reccomend chosing "Open a .ca file". You can access a .ca file by unzipping a .tendies, and opening folders <code>descriptors/[UUID]/versions/[number]/contents/</code>.</p>
                     <p>In this folder, you'll see a folder ending in '.wallpaper', open it. You'll now be greeted by 3 folders (or files, on Macs with Mica installed). Open the folder that contains 'Floating', or 'Background' in its name. These files contain the main wallpaper content.</p>
-                    <p className="mt-4 italic text-center text-gray-500">OpenPoster Interface Screenshot</p>
+                    <img src='/app/select.png' className='w-full rounded-2xl'></img>
                     <p>Creating a .ca file is also an option, but if you're just looking to modify an existing wallpaper, I would suggest the steps above.</p>
                   </div>
                 </section>
@@ -192,7 +192,7 @@ function DocsPage({ onNavigate }: { onNavigate: (page: string) => void }) {
                           <li><code>keyTimes</code></li>
                           <li><code>states</code></li>
                       </ul>
-                      <p className="mt-4 italic text-center text-gray-500">OpenPoster Interface Screenshot</p>
+                      <img src='/app/inspector.png' className='w-full rounded-2xl mt-4'></img>
                     </div>
                     
                     <div>
@@ -204,17 +204,17 @@ function DocsPage({ onNavigate }: { onNavigate: (page: string) => void }) {
                         <li>And more elements</li>
                       </ul>
                       <p>With OpenPoster, you can view all the layers contained within the .ca file you're working with.</p>
-                      <p className="mt-4 italic text-center text-gray-500">OpenPoster Interface Screenshot</p>
+                      <img src='/app/opened.png' className='w-full rounded-2xl mt-4'></img>
                     </div>
 
                     <div>
                       <h3 className="text-lg sm:text-2xl font-medium text-black mb-2">Layers</h3>
                       <p>You can also add additional layers. For example, text layers.</p>
-                      <p className="mt-2 italic text-center text-gray-500">Adding layers with OpenPoster</p>
+                      <img src='/app/addlayer.png' className='w-full rounded-2xl mt-2'></img>
                       <p className="mt-4">Then, you can change the text.</p>
-                      <p className="mt-2 italic text-center text-gray-500">Adding a Text Layer</p>
+                      <img src='/app/textLayer.png' className='w-full rounded-2xl mt-2'></img>
                       <p className="mt-4">You can also add a Basic Layer (empty layer), or a Image Layer. You can edit the features of the layers (size, rotation, postiton, name, etc.) within OpenPoster's Inspector.</p>
-                      <p className="mt-2 italic text-center text-gray-500">Changing properties inside the Inspector</p>
+                      <img src='/app/inspectorDeg.png' className='w-full rounded-2xl mt-2'></img>
                     </div>
                   </div>
                 </section>
@@ -225,7 +225,7 @@ function DocsPage({ onNavigate }: { onNavigate: (page: string) => void }) {
                   <div className="space-y-3 text-gray-600">
                     <p>Now, time for the easiest step. Exporting.</p>
                     <p>Once you're done editing your .ca files, you can head on over to the top right corner and hit 'Export'.</p>
-                    <p className="mt-2 italic text-center text-gray-500">Exporting Panel</p>
+                    <img src='/app/export.png' className='w-full rounded-2xl mt-2'></img>
                     <p className="mt-4">If you have Nugget open, you can click 'Export to Nugget'. Though, the safest option is to go with 'Export as .tendies'. This automatically compiles the .tendies file for you.</p>
                     <p className="font-semibold text-center mt-6">You've reached the end!.. For now.</p>
                   </div>

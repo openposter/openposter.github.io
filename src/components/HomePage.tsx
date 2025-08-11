@@ -15,7 +15,7 @@ function HomePage({ onNavigate }: { onNavigate: (page: string) => void }) {
           <div className="space-y-8">
             <div className="inline-flex items-center space-x-2 bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm font-medium">
               <Star className="w-4 h-4" />
-              <span>v0.0.4 Beta 1 Coming Soon!</span>
+              <span>v0.0.4 Beta 1 in beta testing!</span>
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-black leading-tight">
